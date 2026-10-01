@@ -38,7 +38,7 @@ def display_welcome():
     """Exibe o cabeçalho inicial da aplicação."""
     console.print(
         Panel.fit(
-            "[bold cyan]📈 AssetPulse[/bold cyan] - Monitor de Investimentos\n"
+            "[bold cyan]AssetPulse[/bold cyan] - Monitor de Investimentos\n"
             "[dim]Acompanhe cotações do mercado em tempo real[/dim]",
             border_style="cyan",
         )
@@ -90,7 +90,7 @@ def select_ticker_from_options(asset_type: AssetType) -> str:
     """Exibe um menu estilizado com ativos sugeridos e opção de digitação manual."""
     options = PRESET_ASSETS.get(asset_type, [])
 
-    console.print("\n[bold yellow]📌 Opções de Ativos Disponíveis:[/bold yellow]")
+    console.print("\n[bold yellow]Opções de Ativos Disponíveis:[/bold yellow]")
     for idx, (ticker, name) in enumerate(options, 1):
         console.print(f"  [bold cyan]{idx}[/bold cyan]. [bold white]{ticker}[/bold white] - {name}")
 
@@ -156,7 +156,7 @@ def main():
                     "• [bold]FIIs:[/bold] HGLG11, MXRF11, XPLG11\n"
                     "• [bold]Ações Internacionais:[/bold] AAPL, TSLA, MSFT\n"
                     "• [bold]Criptomoedas:[/bold] BTC-USD, ETH-USD, SOL-USD\n\n"
-                    "[bold yellow]💻 Comando Rápido via Terminal:[/bold yellow]\n"
+                    "[bold yellow]Comando Rápido via Terminal:[/bold yellow]\n"
                     "• `python -m app.cli -t PETR4`\n"
                     "• `python -m app.cli -t BTC-USD --asset-type crypto`",
                     title="Guia Rápido",
